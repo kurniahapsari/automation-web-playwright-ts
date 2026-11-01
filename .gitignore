@@ -1,0 +1,12 @@
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Secrets and saved sessions — never commit
+.env
+.auth/
+
+# Live article list collected by the discover setup project
+.cache/

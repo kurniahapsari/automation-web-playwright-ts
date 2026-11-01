@@ -1,0 +1,33 @@
+{
+  "name": "kumparan-web-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright + TypeScript E2E tests for kumparan.com desktop and mobile sites (kumparan QA skill test, Task B).",
+  "scripts": {
+    "test": "playwright test",
+    "test:desktop": "playwright test --project=desktop-chrome",
+    "test:mobile": "playwright test --project=mobile-chrome",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:guest": "playwright test --grep @guest",
+    "test:auth": "playwright test --grep @auth",
+    "test:human": "cross-env HUMAN=1 playwright test --grep @human --headed --workers=1",
+    "test:flaky-check": "playwright test --grep @smoke --repeat-each=3",
+    "auth:save": "playwright test --project=auth-desktop --project=auth-mobile --headed --workers=1",
+    "auth:save:desktop": "playwright test --project=auth-desktop --headed",
+    "auth:save:mobile": "playwright test --project=auth-mobile --headed",
+    "auth:cookie": "node scripts/cookie-from-clipboard.mjs",
+    "auth:import": "playwright test --project=auth-import-desktop --project=auth-import-mobile --workers=1",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "cross-env": "^10.1.0",
+    "dotenv": "^18.0.9",
+    "typescript": "^7.0.2"
+  }
+}
