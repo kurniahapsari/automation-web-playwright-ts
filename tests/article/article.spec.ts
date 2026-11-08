@@ -41,7 +41,7 @@ test.describe('Article page', { tag: '@guest' }, () => {
     await page.goto(href!);
 
     await expect(page).toHaveURL(new RegExp(`${href}$`));
-    await expect(page.getByTestId(/^(news-item|story-result-card|list-item-card|news-card)$/).first()).toBeVisible();
+    await expect(page.getByTestId(/^(news-item|story-result-card|list-item-card|news-card|channel-story-item)$/).first()).toBeVisible();
   });
 
   test.describe('404', () => {
