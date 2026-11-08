@@ -2,15 +2,6 @@
 
 Playwright + TypeScript end-to-end tests for **kumparan.com (desktop)** and **m.kumparan.com (mobile)**. This is Task B of the kumparan QA Engineer skill test.
 
-The tests automate the test cases designed in Task A. Every test title starts with its Task A ID (e.g. `TC-SHR-004`), so results trace straight back to the workbook.
-
-| Part of the submission | Link |
-|---|---|
-| Task A: test cases & risk analysis (XLSX) | `docs/kumparan-qa-test-cases.xlsx` · Google Sheets: `<GOOGLE_SHEETS_LINK>` |
-| Task B: Playwright web tests | this repo |
-| Task C: Playwright Agents | `<TASK_C_REPO_URL>` |
-| Task D: GraphQL API tests | `<TASK_D_REPO_URL>` |
-
 ## Quick start
 
 ```bash
